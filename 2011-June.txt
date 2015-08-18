@@ -1,0 +1,164 @@
+From marcbishara at gmail.com  Thu Jun 30 04:03:23 2011
+From: marcbishara at gmail.com (marc bishara)
+Date: Wed, 29 Jun 2011 19:03:23 -0700
+Subject: [Kapture-devel] Error while trying to build Kapture
+Message-ID: <BANLkTi=vpLLSKD5WyGbzOUEV+emegtOQ=w@mail.gmail.com>
+
+Hi,
+
+I am trying to build kapture, my end goal is to have is streaming video from
+camera on a robot.
+The error I get when I am trying to make is:
+"
+kapture/trunk/src/joystick.cpp:20: error: ?uint32_t? does not name a type
+kapture/trunk/src/joystick.cpp:21: error: ?uint32_t? does not name a type
+"
+. It breaks after [43%]
+. and here is the output of cmake (incase it contains useful information)
+
+"
+-- The C compiler identification is GNU
+-- The CXX compiler identification is GNU
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Looking for Q_WS_X11
+-- Looking for Q_WS_X11 - found
+-- Looking for Q_WS_WIN
+-- Looking for Q_WS_WIN - not found.
+-- Looking for Q_WS_QWS
+-- Looking for Q_WS_QWS - not found.
+-- Looking for Q_WS_MAC
+-- Looking for Q_WS_MAC - not found.
+-- Found Qt-Version 4.7.0 (using /usr/bin/qmake)
+-- Found OpenSSL: /usr/lib/libssl.so;/usr/lib/libcrypto.so
+ * Install in /usr/local ().
+-- Configuring done
+-- Generating done
+"
+
+Please let me know if you have any idea as to what is causing this error or
+how I can fix it.
+
+Thanks a lot for your help,
+Marc
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/kapture-devel/attachments/20110629/b84d5c73/attachment.html>
+
+From marcbishara at gmail.com  Thu Jun 30 16:22:30 2011
+From: marcbishara at gmail.com (marc bishara)
+Date: Thu, 30 Jun 2011 10:22:30 -0400
+Subject: [Kapture-devel] Error while trying to build Kapture (marc
+	bishara)
+Message-ID: <BANLkTi=YrbVNF1RyspdKTRLj+j_=vZXBsw@mail.gmail.com>
+
+Hi,
+
+I have figured out the error, I just needed to include stdio.h in all the
+files, didn't realize that was missing yesterday.
+
+Marc
+
+On Thu, Jun 30, 2011 at 6:00 AM, <kapture-devel-request at lists.berlios.de>wrote:
+
+> Send Kapture-devel mailing list submissions to
+>        kapture-devel at lists.berlios.de
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>        https://lists.berlios.de/mailman/listinfo/kapture-devel
+> or, via email, send a message with subject or body 'help' to
+>        kapture-devel-request at lists.berlios.de
+>
+> You can reach the person managing the list at
+>        kapture-devel-owner at lists.berlios.de
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Kapture-devel digest..."
+>
+>
+> Today's Topics:
+>
+>   1. Error while trying to build Kapture (marc bishara)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Wed, 29 Jun 2011 19:03:23 -0700
+> From: marc bishara <marcbishara at gmail.com>
+> To: kapture-devel at lists.berlios.de
+> Subject: [Kapture-devel] Error while trying to build Kapture
+> Message-ID: <BANLkTi=vpLLSKD5WyGbzOUEV+emegtOQ=w at mail.gmail.com>
+> Content-Type: text/plain; charset="windows-1252"
+>
+> Hi,
+>
+> I am trying to build kapture, my end goal is to have is streaming video
+> from
+> camera on a robot.
+> The error I get when I am trying to make is:
+> "
+> kapture/trunk/src/joystick.cpp:20: error: ?uint32_t? does not name a type
+> kapture/trunk/src/joystick.cpp:21: error: ?uint32_t? does not name a type
+> "
+> . It breaks after [43%]
+> . and here is the output of cmake (incase it contains useful information)
+>
+> "
+> -- The C compiler identification is GNU
+> -- The CXX compiler identification is GNU
+> -- Check for working C compiler: /usr/bin/gcc
+> -- Check for working C compiler: /usr/bin/gcc -- works
+> -- Detecting C compiler ABI info
+> -- Detecting C compiler ABI info - done
+> -- Check for working CXX compiler: /usr/bin/c++
+> -- Check for working CXX compiler: /usr/bin/c++ -- works
+> -- Detecting CXX compiler ABI info
+> -- Detecting CXX compiler ABI info - done
+> -- Looking for Q_WS_X11
+> -- Looking for Q_WS_X11 - found
+> -- Looking for Q_WS_WIN
+> -- Looking for Q_WS_WIN - not found.
+> -- Looking for Q_WS_QWS
+> -- Looking for Q_WS_QWS - not found.
+> -- Looking for Q_WS_MAC
+> -- Looking for Q_WS_MAC - not found.
+> -- Found Qt-Version 4.7.0 (using /usr/bin/qmake)
+> -- Found OpenSSL: /usr/lib/libssl.so;/usr/lib/libcrypto.so
+>  * Install in /usr/local ().
+> -- Configuring done
+> -- Generating done
+> "
+>
+> Please let me know if you have any idea as to what is causing this error or
+> how I can fix it.
+>
+> Thanks a lot for your help,
+> Marc
+> -------------- next part --------------
+> An HTML attachment was scrubbed...
+> URL: <
+> https://lists.berlios.de/pipermail/kapture-devel/attachments/20110629/b84d5c73/attachment-0001.html
+> >
+>
+> ------------------------------
+>
+> _______________________________________________
+> Kapture-devel mailing list
+> Kapture-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/kapture-devel
+>
+>
+> End of Kapture-devel Digest, Vol 2, Issue 1
+> *******************************************
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/kapture-devel/attachments/20110630/abd91094/attachment.html>
+

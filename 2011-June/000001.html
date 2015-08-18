@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Kapture-devel] Error while trying to build Kapture
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/kapture-devel/2011-June/index.html" >
+   <LINK REL="made" HREF="mailto:kapture-devel%40lists.berlios.de?Subject=Re%3A%20%5BKapture-devel%5D%20Error%20while%20trying%20to%20build%20Kapture&In-Reply-To=%3CBANLkTi%3DvpLLSKD5WyGbzOUEV%2BemegtOQ%3Dw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000002.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Kapture-devel] Error while trying to build Kapture</H1>
+    <B>marc bishara</B> 
+    <A HREF="mailto:kapture-devel%40lists.berlios.de?Subject=Re%3A%20%5BKapture-devel%5D%20Error%20while%20trying%20to%20build%20Kapture&In-Reply-To=%3CBANLkTi%3DvpLLSKD5WyGbzOUEV%2BemegtOQ%3Dw%40mail.gmail.com%3E"
+       TITLE="[Kapture-devel] Error while trying to build Kapture">marcbishara at gmail.com
+       </A><BR>
+    <I>Thu Jun 30 04:03:23 CEST 2011</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000002.html">[Kapture-devel] Error while trying to build Kapture (marc	bishara)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+I am trying to build kapture, my end goal is to have is streaming video from
+camera on a robot.
+The error I get when I am trying to make is:
+&quot;
+kapture/trunk/src/joystick.cpp:20: error: &#8216;uint32_t&#8217; does not name a type
+kapture/trunk/src/joystick.cpp:21: error: &#8216;uint32_t&#8217; does not name a type
+&quot;
+. It breaks after [43%]
+. and here is the output of cmake (incase it contains useful information)
+
+&quot;
+-- The C compiler identification is GNU
+-- The CXX compiler identification is GNU
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Looking for Q_WS_X11
+-- Looking for Q_WS_X11 - found
+-- Looking for Q_WS_WIN
+-- Looking for Q_WS_WIN - not found.
+-- Looking for Q_WS_QWS
+-- Looking for Q_WS_QWS - not found.
+-- Looking for Q_WS_MAC
+-- Looking for Q_WS_MAC - not found.
+-- Found Qt-Version 4.7.0 (using /usr/bin/qmake)
+-- Found OpenSSL: /usr/lib/libssl.so;/usr/lib/libcrypto.so
+ * Install in /usr/local ().
+-- Configuring done
+-- Generating done
+&quot;
+
+Please let me know if you have any idea as to what is causing this error or
+how I can fix it.
+
+Thanks a lot for your help,
+Marc
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/kapture-devel/attachments/20110629/b84d5c73/attachment.html">https://lists.berlios.de/pipermail/kapture-devel/attachments/20110629/b84d5c73/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000002.html">[Kapture-devel] Error while trying to build Kapture (marc	bishara)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/kapture-devel">More information about the Kapture-devel
+mailing list</a><br>
+</body></html>

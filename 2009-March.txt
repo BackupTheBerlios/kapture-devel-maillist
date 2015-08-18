@@ -1,0 +1,23 @@
+From rlfebrero at gmail.com  Thu Mar 26 12:28:28 2009
+From: rlfebrero at gmail.com (Ricardo L. Febrero)
+Date: Thu, 26 Mar 2009 12:28:28 +0100
+Subject: [Kapture-devel] FEATURE: Kapture for Qt 4.2
+In-Reply-To: <b321594e0903260423q60165dbdm587f439a338d8315@mail.gmail.com>
+References: <b321594e0903260423q60165dbdm587f439a338d8315@mail.gmail.com>
+Message-ID: <b321594e0903260428m7a266e97v428b742b635b135e@mail.gmail.com>
+
+Hello.
+
+I'm a Qt and C++ developer. I'm interested in porting Kapture to Qt
+4.2. Is there any recommendation? I have seen that some features, like
+SSH, cannot be ported to this version, but I'm not interested. I think
+that I could just remove these features if compiling for Qt 4.2 or
+lesser.
+
+Also, one more thing: I'm currently having trouble to work with my UVC
+webcam for the brightness being too high. Does Kapture provide any
+option to handle this issue, maybe by adjusting camera exposure?
+
+Thank you.
+
+
